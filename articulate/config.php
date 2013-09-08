@@ -46,7 +46,7 @@ define('RSS_FILE', 'rss.xml');
 //Number of posts to list in the RSS file
 define('RSS_ITEMS', 10);
 
-//The URL of your site
+//The URL of your site (including http(s):// and trailing slash)
 define('RSS_LINK', '');
 
 //A brief description of your site
