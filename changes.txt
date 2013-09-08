@@ -1,0 +1,52 @@
+Since September 2013, when the project was revived, Articulate has been hosted and maintained on GitHub. Previous changes are documented below:
+
+Version 1.1 - 16 February 2011
+- Complete rewrite, most prominent feature changes listed below:
+- Ability to generate RSS files
+- Post titles are now stored within the files themselves, which allows for non-
+Latin characters as long as the files themselves are encoded using UTF-8
+- New template phrases which allow templates to become portable
+- New default templates
+- The included PHP Markdown Extra has been updated to version 1.2.4
+
+(Minor update) - 9 March 2010
+- Fixed a long standing mistake in the stated version number of PHP Markdown in
+readme.html
+
+Release 7 - 9 September 2009
+- Non-English titles issue partially corrected - Most Latin characters should
+now work
+- Non-alphanumeric characters are stripped from file names
+- Robots tag added to update script
+
+Alpha 6 - 13 July 2009
+- Documentation added
+- Articulate is now open source software licensed under a BSD-style licence
+
+Alpha 5 - 12 July 2009
+- Complete rewrite
+- Regression: No more pages. May or may not be added back future versions
+- Post generation is now much more efficient and selective
+- Error handling added
+- Index and archive generation separated from templates
+- Update script now has much prettier output
+- All instances of ereg() replaced with preg_match() (Thanks Mike)
+- The code is in general a lot better
+
+Alpha 4 - 3 July 2009
+- Fixed a regression that caused archives generation to not work properly
+- Changed default template to include page title in <title>
+- Fixed an issue that prevented dates from being displayed on permalink pages
+- Fixed a regression that caused index.html to include all posts and not just
+the latest ones
+
+Alpha 3 - 1 July 2009
+- Fixed potential issues with post ordering in index and archive pages
+
+Alpha 2 - 16 April 2009
+- Basic documentation, "welcome" post
+- Primitive output for output page
+- User definable variables
+
+Alpha 1 - 29 March 2009
+- Initial working prototype
