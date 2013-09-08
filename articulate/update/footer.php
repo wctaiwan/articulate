@@ -3,7 +3,7 @@
 
 <div id="footer">
 <a href="index.php?r">Rebuild your website &raquo;</a>
-<span id="version"><a href="http://wctaiwan.com/articulate/">Articulate</a> 1.1</span>
+<span id="version"><a href="https://github.com/wctaiwan/articulate">Articulate</a></span>
 </div>
 </body>
 </html>
