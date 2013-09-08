@@ -15,6 +15,7 @@ Thanks to members of `#neowin` and `##php` for their help.
 ## Installation
 1. Upload the contents of `articulate/` to a folder on your web server.
 2. Navigate to `update/` in your web browser.
+
 * If there are no errors, installation is complete.
 * Otherwise, please make sure Articulate has the required permissions on the indicated files.
 
