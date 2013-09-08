@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Articulate 1.1 Readme</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #DDD;
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 30px 0 10px 0;
+}
+
+ul, ol {
+	margin: 0 0 10px 20px;
+}
+
+#container {
+	margin: 10px auto;
+	padding: 20px;
+	width: 500px;
+	background-color: #FFF;
+}
+
+#header {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+#title {
+	position: absolute;
+	right: 0;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	color: #666;
+	line-height: 47px;
+}
+
+.error {
+	color: #F00;
+}
+
+#footer {
+	position: relative;
+	margin: 0 auto 20px auto;
+	width: 540px;
+	font-size: 11px;
+	color: #666;
+}
+
+#footer a {
+	color: #666;
+	text-decoration: none;
+}
+
+#footer a:hover, #footer a:active {
+	text-decoration: underline;
+}
+
+#version {
+	position: absolute;
+	right: 0;
+}
+</style>
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<img src="articulate/update/articulate.gif" alt="Articulate" />
+<span id="title">Readme File</span>
+</div>
+
+<p>Thank you for downloading Articulate 1.1. Before continuing, please make sure you have the latest version by checking <a href="http://wctaiwan.com/articulate/">the project website</a>.</p>
+
+<p class="error"><strong>Important:</strong> Do not place any content manually in any file Articulate writes to. It will be irrecoverably overwritten.</p>
+
+<h2>Table of contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#licence">Licence information</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#updating">Updating your website</a></li>
+<li><a href="#customising">Customising your website</a></li>
+<li><a href="#help">Getting help</a></li>
+</ul>
+
+<h2><a name="introduction">Introduction</a></h2>
+<p>Articulate is a simple semi-dynamic blogging script in PHP. Compared to traditional blogging scripts that compile content as they're requested by visitors, Articulate acts more like a batch converter that generates HTML pages from plain text files based on templates. While it has few features, it is lightweight and easy to customise.</p>
+
+<h2><a name="licence">Licence Information</a></h2>
+<p>Articulate is released under a 2-clause BSD licence, as outlined in <code>licence.txt</code>.</p>
+<p>Articulate includes a copy of <a href="http://michelf.com/projects/php-markdown/">PHP Markdown</a> Extra 1.2.4 by John Gruber and Michel Fortin, which is released under a BSD-style open source licence. More information can be found in <code>update/markdown.php</code>.</p>
+
+<h2><a name="acknowledgments">Acknowledgments</a></h2>
+<p>Thanks to members of <code>#neowin</code> and <code>##php</code> for their help.</p>
+
+<h2><a name="installation">Installation</a></h2>
+<ol>
+<li>Upload the contents of <code>articulate/</code> to a folder on your web server.</li>
+<li>Navigate to <code>update/</code> in your web browser.</li>
+</ol>
+<ul>
+<li>If there are no errors, installation is complete</li>
+<li>Otherwise, please make sure Articulate has the required permissions on the indicated files</li>
+</ul>
+
+<h2><a name="updating">Updating your website</a></h2>
+<p><strong>Creating new posts</strong></p>
+<p>Upload text files with file names in the format of <code>YY-MM-DD-short_name.txt</code> to <code>_posts</code> and then go to <code>update/</code>.</p>
+<p>The first line of the file would be read as the title of the post, with the rest being the contents. You can use <a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> to format your posts.</p>
+<p><strong>Updating existing posts</strong></p>
+<p>Modify the corresponding text file in <code>_posts/</code> and then go to <code>update/</code>.
+<p><strong>Deleting existing posts</strong></p>
+<p>To remove a post from the index and archive pages and the RSS file, remove the corresponding text file and then go to <code>update/</code>.</p>
+<p><strong>Rebuilding your website</strong></p>
+<p>By default, Articulate does not update HTML versions of posts that have not been changed since the last update, or remove those of posts that have been deleted. If you change the configuration or appearance of your site, it may be necessary to manually trigger a rebuild of your entire website.</p>
+<p>To do so, click on <span style="text-decoration: underline;">Rebuild your website &raquo;</span>, located at the bottom of the update script.</p>
+
+<h2><a name="customising">Customising your website</a></h2>
+<ul>
+<li>You can configure your site by editing <code>config.php</code>.</li>
+<li>You can change the appearance of your site by creating template files and placing them in <code>templates/</code>. You can use PHP in your template files&mdash;it will be interpreted the moment the files are loaded.</li>
+</ul>
+
+<h2><a name="help">Getting help</a></h2>
+<p>Please go to <a href="http://wctaiwan.com/articulate/">the project website</a> for more information on using and customising Articulate.</p>
+<p>If you have any questions or comments, please send them to wctaiwan at Google's email service. Thanks.</p>
+</div>
+
+<div id="footer"><a href="http://wctaiwan.com/articulate/">Articulate</a> 1.1</div>
+</body>
+</html>

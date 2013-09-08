@@ -1,0 +1,7 @@
+Example post
+============
+
+If you can see this and nothing else appears to be broken, it is likely that
+Articulate is correctly functioning.
+
+Thanks for trying out the script and happy blogging.
