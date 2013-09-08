@@ -20,6 +20,7 @@ Thanks to members of `#neowin` and `##php` for their help.
 * Otherwise, please make sure Articulate has the required permissions on the indicated files.
 
 ## Updating your website
+*Important: Do not place any content manually in any file Articulate writes to. It will be irrecoverably overwritten.*
 
 ### Creating new posts
 Upload text files with file names in the format of `YY-MM-DD-short_name.txt` to `_posts/` and then go to `update/`.
