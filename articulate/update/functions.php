@@ -44,7 +44,7 @@ function preUpdateCheck () {
 		$error = true;
 	}
 
-	if ($error == true) {
+	if (isset($error)) {
 		echo "<p>Some problems were detected. Please resolve them and run the update script again.</p>";
 		include 'footer.php';
 		exit;

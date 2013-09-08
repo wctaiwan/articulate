@@ -5,6 +5,7 @@ include 'header.php';
 
 preUpdateCheck();
 $error = false;
+set_default_timezone('UTC'); //suppress unrelated warnings
 
 echo "<p>Generating a list of posts</p>\n";
 $sourceArray = getSourceArray();
