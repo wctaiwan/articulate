@@ -35,7 +35,7 @@ To remove a post from the index and archive pages and the RSS file, remove the c
 ### Rebuilding your website
 By default, Articulate does not update HTML versions of posts that have not been changed since the last update, or remove those of posts that have been deleted. If you change the configuration or appearance of your site, it may be necessary to manually trigger a rebuild of your entire website.
 
-To do so, click on <span style="text-decoration: underline;">Rebuild your website &raquo;</span>, located at the bottom of the update script.
+To do so, click on "Rebuild your website", located at the bottom of the update script.
 
 ## Customising your website
 * You can configure your site by editing `config.php`.
