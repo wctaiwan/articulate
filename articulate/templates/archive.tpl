@@ -28,7 +28,7 @@
 [/post]
 </div>
 
-<div id="footer">Created with <a href="http://wctaiwan.com/articulate/">Articulate</a></div>
+<div id="footer">Created with <a href="https://github.com/wctaiwan/articulate">Articulate</a></div>
 </div>
 </body>
 </html>
