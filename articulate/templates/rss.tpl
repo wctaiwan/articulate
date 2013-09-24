@@ -9,6 +9,7 @@
 <item>
 <title>[title]</title>
 <link>[rss_link][link]</link>
+<pubDate>[date]</pubDate>
 <description><![CDATA[
 [body]
 ]]></description>

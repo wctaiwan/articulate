@@ -51,6 +51,3 @@ define('RSS_LINK', '');
 
 //A brief description of your site
 define('RSS_DESCRIPTION', '');
-
-//Date format for the RSS file
-define('RSS_DATE_FORMAT', 'j F Y');
