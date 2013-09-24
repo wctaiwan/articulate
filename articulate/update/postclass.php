@@ -41,7 +41,7 @@ class Post {
 		else if ($type == 'archive')
 			$date = date(ARCHIVE_DATE_FORMAT, $this->date);
 		else if ($type == 'rss')
-			$date = date('D, d M Y H:i:s T', $this->date);
+			$date = date('D, d M Y H:i:s O', $this->date);
 		else {
 			echo "<p class=\"error\">A fatal error occurred</p>\n";
 			include 'footer.php';
