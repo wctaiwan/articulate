@@ -8,7 +8,7 @@
 [post]
 <item>
 <title>[title]</title>
-<link>[rss_link][link]</link>
+<guid>[rss_link][link]</guid>
 <pubDate>[date]</pubDate>
 <description><![CDATA[
 [body]
