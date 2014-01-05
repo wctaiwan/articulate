@@ -42,5 +42,10 @@ To do so, click on "Rebuild your website", located at the bottom of the update s
 * You can configure your site by editing `config.php`.
 * You can change the appearance of your site by creating template files and placing them in `templates/`. You can use PHP in your template files&mdash;it will be interpreted the moment the files are loaded.
 
+## Known issues
+The script does not store the creation time of each post. This leads to two issues:
+* In the RSS feed, all posts are shown to have been published at 00:00 UTC.
+* Posts made on the same day are listed in reverse alphabetical order based on their file names.
+
 ## Getting help
 If you have any questions or comments, please send them to wctaiwan at Google's email service.
