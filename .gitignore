@@ -1,2 +1,6 @@
 *.ini
 *.db
+articulate/posts/
+articulate/*.html
+articulate/*.xml
+articulate/lastupdate.txt
