@@ -1,16 +1,15 @@
 <?php
+require_once 'UpdateUtils.php';
 require_once 'Post.php';
 require_once 'MessagePrinter.php';
-
 require_once '../config.php';
 
 class Updater {
 
 	private $rebuild;
 	private $fatalError = false;
-	private $updateIssues = false;
+	private $updateWarning = false;
 	private $templates = null;
-	private $lastUpdate = 0;
 	private $sourceArray;
 
 	public function __construct ($rebuild) {
@@ -29,35 +28,51 @@ class Updater {
 
 	private function performUpdate () {
 		if ($rebuild) {
-			emptyOutputDir();
+			if (!UpdaterUtils::emptyDir(OUTPUT_DIR))
+				$updateWarning = true;
 			$lastUpdate = 0;
 		} else {
 			$lastUpdate = file_get_contents('../lastupdate.txt');
 		}
 
-		getSourceArray()
-		generatePosts();
+		getSourceArray();
+		generatePosts($lastUpdate);
 		generateIndex();
 		generateArchive();
 		if (RSS)
 			generateRss();
 
-		if ($updateIssues)
-			MessagePrinter::updateIssues();
-		else
+		if ($updateWarning) {
+			MessagePrinter::updateWarning();
+		} else
+			recordUpdate();
 			MessagePrinter::updateComplete();
+		}
 	}
 
 	private function checkOutputFiles () {
-	}
+		$error = false;
+		if (!UpdaterUtils::checkAndCreateDir(OUTPUT_DIR))
+			$error = true;
+		if (!UpdaterUtils::checkAndCreateFile('lastupdate.txt'))
+			$error = true;
+		if (!UpdaterUtils::checkAndCreateFile(INDEX_FILE))
+			$error = true;
+		if (!UpdaterUtils::checkAndCreateFile(ARCHIVE_FILE))
+			$error = true;
+		if (RSS && !UpdaterUtils::checkAndCreateFile(RSS_FILE))
+			$error = true;
 
-	private function emptyOutputDir () {
+		if ($error) {
+			MessagePrinter::fileError();
+			$fatalError = true;
+		}
 	}
 
 	private function getSourceArray () {
 	}
 
-	private function generatePosts () {
+	private function generatePosts ($lastUpdate) {
 	}
 
 	private function generateIndex () {
@@ -67,5 +82,8 @@ class Updater {
 	}
 
 	private function generateRss () {
+	}
+
+	private function recordUpdate () {
 	}
 }
