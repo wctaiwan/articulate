@@ -22,7 +22,7 @@ function update ($rebuild) {
 
 	//purge output directory if rebuilding, otherwise set last update time
 	if ($rebuild) {
-		if (!purgeDir(OUTPUT_DIR))
+		if (!purgeOutputDir())
 			$updateWarning = true;
 	} else {
 		$lastUpdate = file_get_contents('../lastupdate.txt');
@@ -52,6 +52,7 @@ function update ($rebuild) {
 
 function checkOutputFiles () {
 	$error = false;
+
 	if (!checkDir(OUTPUT_DIR))
 		$error = true;
 	if (!checkFile('lastupdate.txt'))
@@ -63,10 +64,10 @@ function checkOutputFiles () {
 	if (RSS && !checkFile(RSS_FILE))
 		$error = true;
 
-	if ($error) {
+	if ($error)
 		MessagePrinter::fileError();
-		$fatalError = true;
-	}
+
+	return !$error;
 }
 
 function checkDir ($dir) {
@@ -78,16 +79,13 @@ function checkDir ($dir) {
 			return true;
 		}
 	} else {
-		if (!mkdir('../'.$dir, 0755)) {
+		if (@!mkdir('../'.$dir, 0755)) {
 			MessagePrinter::dirCreateError($dir);
 			return false;
 		} else {
-			if (file_put_contents('../'.$dir.'/index.html', '') === false || !chmod('../'.$dir.'/index.html', 0644)) {
-				MessagePrinter::dirCreateError($dir);
-				return false;
-			} else {
-				return true;
-			}
+			file_put_contents('../'.$dir.'/index.html', '');
+			chmod('../'.$dir.'/index.html', 0644);
+			return true;
 		}
 	}
 }
@@ -101,7 +99,7 @@ function checkFile ($filename) {
 			return true;
 		}
 	} else {
-		if (file_put_contents('../'.$filename, '') === false || !chmod('../'.$filename, 0644)) {
+		if (@file_put_contents('../'.$filename, '') === false || @!chmod('../'.$filename, 0644)) {
 			MessagePrinter::fileCreateError($filename);
 			return false;
 		} else {
@@ -110,19 +108,33 @@ function checkFile ($filename) {
 	}
 }
 
-function getSourceArray () {
+function getTemplates ($templates) {
+	$error = false;
+
+	$tplNames = array('index', 'archive', 'post');
+	if (RSS)
+		$tplNames[] = 'rss';
+
+	for ($tplNames as $tplName) {
+	}
 }
 
-function generatePosts ($lastUpdate) {
+function purgeOutputDir () {
 }
 
-function generateIndex () {
+function getSourceArray ($sourceArray) {
 }
 
-function generateArchive () {
+function generatePosts ($sourceArray, $templates, $lastUpdate) {
 }
 
-function generateRss () {
+function generateIndex ($sourceArray, $templates) {
+}
+
+function generateArchive ($sourceArray, $templates) {
+}
+
+function generateRss ($sourceArray, $templates) {
 }
 
 function recordUpdate () {
