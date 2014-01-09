@@ -1,5 +1,5 @@
 <?php
-require_once 'Updater.php';
+require_once 'updater.php';
 include 'header.php';
-(new Updater(isset($_GET['r'])))->update();
+update(isset($_GET['r']));
 include 'footer.php';
